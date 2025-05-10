@@ -1,2 +1,2 @@
-# cruso-de-python
+# curso-de-python
 todos os exercicios do curso do guanabara referentes a puthon
