@@ -1,6 +1,4 @@
 lista = []
-pos = 0
-
 for cont in range (0,5): #esse loop vai girar 5 vezes
     valor = int(input('digite um valor: ')) #input pro usuario digitar o valor
     if valor in lista: #se o valor estiver na lista, a mensagem aparece pedindo um valor novo
@@ -15,4 +13,5 @@ for cont in range (0,5): #esse loop vai girar 5 vezes
                 print(f'valor adicionado na posição: {pos}')
                 break #quando o valor for inserido ele sai do loop
             pos += 1 #se não sair do loop o valor, a variavel pos soma 1
+    pos = 0 #pos resetaclea
 print(f'a lista ordenada fica: {lista}') #exibe a lista ordenada
