@@ -20,7 +20,7 @@ while True:
         print('o numero é Impar, você ganhou')
         contjog += 1
         print('=-' * 20)
-    elif escolha == 'P' and resultado != 0 or escolha == 'I' and resultado == 0: #verificaçao de perda
+    elif escolha == 'P' and resultado not in ['0'] or escolha == 'I' and resultado not in ['0']: #verificaçao de perda
         print(f'YOU LOSE!!!! \n Você venceu {contjog} vezes.')
         break
 print('=-' * 20)
