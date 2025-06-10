@@ -3,11 +3,13 @@ pessoas = []
 pessoamin = []
 pessoamax = []
 contador =  0
-
+print('/'* 30)
 while True:
+    
     pessoas.append(str(input('digite seu nome: ')))
     pessoas.append(int(input('digite seu peso: ')))
     escolha = input('quer continuar? [S/N]').upper()
+    print('/'* 30)
   
     galera.append(pessoas)
     if pessoamax == [] :
@@ -21,7 +23,8 @@ while True:
     contador += 1
     if escolha == 'N':
         break
- 
+print('=-' * 30)
 print(f'foram cadastradas {contador} pessoas')
 print(f'''a pessoa mais pesada é {pessoamax[0]} e pesa: {pessoamax[1]}. 
 e a mais leve é {pessoamin[0]} pesando {pessoamin[1]}''') 
+print('=-' * 30)
