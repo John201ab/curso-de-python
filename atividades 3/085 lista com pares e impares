@@ -1,0 +1,8 @@
+numeros = [[],[]]
+for contador in range(7):
+    valor = int(input(f'digite o {contador + 1}° valor: '))
+    if valor % 2 == 0:
+        numeros[0].insert(0, valor)
+    else:
+        numeros[1].insert(0,valor)
+    valor = []
