@@ -1,8 +1,13 @@
 numeros = [[],[]]
-for contador in range(7):
-    valor = int(input(f'digite o {contador + 1}° valor: '))
-    if valor % 2 == 0:
-        numeros[0].insert(0, valor)
-    else:
+
+for contador in range(7): #faz o loop 7 vezes 
+    valor = int(input(f'digite o {contador + 1}° valor: ')) #cada loop vai ser pedido pro usuario digitar um numeri
+    if valor % 2 == 0: #se o resto da divisão for igual a 0, vai ser inserido na lista 0
+        for c in range(len(numeros[0])):
+            if valor < numeros:
+                numeros[0].insert(c, valor)
+    else: #se nao, vai ser inserido na lista 1(juro q nao foi proposital kkkkkk)
         numeros[1].insert(0,valor)
-    valor = []
+    valor = [] # a lista reseta pra receber novos valores 
+   
+print(f'ok, os valores impares digitados são: {sublistas[1]} e os pares são {sublistas[0]}')
