@@ -1,0 +1,25 @@
+from random import randint
+from time import sleep
+
+cartela = []
+jogo = []
+contador = 0
+jogos = int(input('quantos jogos vao ser sorteados?'))
+
+for loop in range(jogos):
+    while contador < 6:
+        sorte = randint(0,99)
+        if sorte not in jogo:
+            jogo.append(sorte)
+            contador += 1
+        else:
+            contador += 0
+    contador = 0
+    cartela.append(jogo)
+    jogo = []
+
+print(f"{f'sorteando {jogos} jogos':=^50}")
+for c in range(len(cartela)):
+    print(f' jogo {c + 1}: {cartela[c]}')
+    sleep(1)  
+print(f"{'BOA SORTE':=^50}")
