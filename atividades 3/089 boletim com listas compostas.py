@@ -1,13 +1,15 @@
 boletim = []
 aluno = []
 notas = []
+
 while True:
-    aluno=(str(input('Digite o nome do aluno: ')))
-    notas1=(int(input('Digite a primeira nota: ')))
-    notas2=(int(input('digite a segunda nota: ')))
+    aluno.append(input('Digite o nome do aluno: '))
+    notas.append(input('Digite a primeira nota: '))
+    notas.append(input('digite a segunda nota: '))
     escolha = input('deseja parar? [S/N]: ').upper()
 
-    boletim.append([aluno],[notas1,notas2])
+    aluno.append(notas[:])
+    boletim.append(aluno[:])
   
 
     if escolha == 'S':
