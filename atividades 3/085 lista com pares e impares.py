@@ -1,7 +1,7 @@
 numeros = [[],[]]
 
 for contador in range(7): #faz o loop 7 vezes 
-    valor = int(input(f'digite o {contador + 1}° valor: ')) #cada loop vai ser pedido pro usuario digitar um numeri
+    valor = int(input(f'digite o {contador + 1}° valor: ')) #cada loop vai ser pedido pro usuario digitar um número
     if valor % 2 == 0: #se o resto da divisão for igual a 0, vai ser inserido na lista 0
         numeros[0].append(valor)
     else: #se nao, vai ser inserido na lista 1(juro q nao foi proposital kkkkkk)
