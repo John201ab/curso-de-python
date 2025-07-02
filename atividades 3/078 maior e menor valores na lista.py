@@ -1,7 +1,7 @@
 valores = []
 maior = menor = cont = ()
 for cont in range(0,5): #repita por 5 vezes
-    valores.append(int(input('digite um numero: '))) #input que sera repetido pro usuario
+    valores.append(int(input(f'digite um numero pa pos {cont}: '))) #input que será repetido pro usuario
 
 for cont in range(len(valores)): #loop que vai girar de acordo com o tamanho da lista
     if valores[cont] == max(valores): #se o valor for igual o maior da lista...
