@@ -1,21 +1,14 @@
 #listas usadas
 boletim = []
-aluno = []
-notas1 = []
-notas2 = []
-nota = []
 check = 0
 while True: #enquanto for verdadeiro
-    aluno.append(input('Digite o nome do aluno: '))
-    notas1 = input('Digite a primeira nota: ')
-    notas2 = input('digite a segunda nota: ')
+    aluno = input('Digite o nome do aluno: ')
+    notas1 = float(input('Digite a primeira nota: '))
+    notas2 = float(input('digite a segunda nota: '))
     escolha = input('deseja parar? [S/N]: ').upper()
+    media = (notas1 + notas2) / 2
+    boletim.append([aluno,[notas1,notas2],media])
 
-    nota.append(notas1[:]) #a lista nota recebe notas1
-    nota.append(notas2[:]) #nota recebe notas2
-    aluno.append(nota) #aluno recebe nota
-    boletim.append(aluno[:]) #boletim recebe aluno, contem nome e as duas notas
-    #todas essas listas ficam vazias dnv
     nota = []
     notas1 = []
     notas2 = []
@@ -31,9 +24,14 @@ while True: #enquanto for verdadeiro
 print('=-' * 30)
 print(f'n°   {"NOME":<10}      {"NOTAS":>20}')
 for c, alunos in enumerate(boletim): #vai passar item por item na lista, no caso nome e nota até acabar tudo
-    print(f'{c} {alunos[0]:<20} {str(alunos[1]):>20}')
+    print(f'{c} {alunos[0]:<20} {str(alunos[2]):>20}')
 print('=-' * 30)
 
-while check != '999': #verdadeiro enquanto for 999
+while True: #verdadeiro enquanto for 999
     check = int(input(f'digite o numero do aluno para ve-lo ou 999 pra encerrar: '))
-    print(f'{boletim[check]}') #procura o item na lista na posição q o usuario decidiu
+    if check == '999': #se o check for igual a '999'
+        break # o programa para
+
+    else:
+        print(f'{boletim[check][0]}    {boletim[check][1]}') #procura o item na lista na posição q o usuario decidiu
+
