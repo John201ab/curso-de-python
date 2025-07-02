@@ -9,8 +9,8 @@ while True:   #enquanto o usuario nao digitar 'n' o loop continua
     escolha = input('quer continuar? [S/N]').upper() #o quebra loop
     print('/'* 30)
     if pessoamax == [] : #se pessoamax for uma lista vazia, essa lista e pessoamin receberao o valor de pessoas
-        pessoamax = (pessoas)
-        pessoamin = (pessoas)
+        pessoamax = pessoas
+        pessoamin = pessoas
     elif pessoas[1] > pessoamax[1]: #se o item na posiçao 1 de pessoas, noo caso o peso, for maior q a de pessoa max
       pessoamax = pessoas #pessoamax substitui o valor da lista pelo novo valor
     elif pessoas[1] < pessoamin[1]: #nesse caso, ele checa se o valor é menor e faz o mesmo de cima
