@@ -1,5 +1,5 @@
 matriz = [[],[],[]]
-for loop in range (3): #esse loop vai contar uma volta quando o debaixo encerraras dele
+for loop in range (3): #esse loop vai contar uma volta quando o debaixo encerrar as dele
     for cont in range (3): #esse vai exibir o input tres vezes, e reiniciar o contador quando o de cima girar
             valores = int(input(f'digite um valor para a posição: [{loop}:{cont}]'))
             matriz[loop].append(valores) #adiciona o valor em determinada posição
