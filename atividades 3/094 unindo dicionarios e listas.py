@@ -19,5 +19,5 @@ while True:
 
 media = idades_totais / loop
 
-for k, c in enumerate(usuarios[k]["idade"]):
-    print(k)
+for k, c in enumerate(usuarios):
+    print(usuarios["nome"])
