@@ -13,6 +13,7 @@ while True:
     idades_totais += pessoas["idade"]
     if pessoas["sexo"] == "M":
         mulheres += 1
+        
     if escolha == 'N':
         break
  
