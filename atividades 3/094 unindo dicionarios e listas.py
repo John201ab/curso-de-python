@@ -1,6 +1,7 @@
 usuarios = list()
+mulheres = list()
 pessoas = dict()
-loop = mulheres = acima = idades_totais = 0
+loop = numulheres= acima = idades_totais = 0
 
 while True:
     pessoas["nome"] = str(input('Digite seu nome: '))
@@ -12,7 +13,8 @@ while True:
     loop += 1
     idades_totais += pessoas["idade"]
     if pessoas["sexo"] == "M":
-        mulheres += 1
+        numulheres += 1
+        mulheres.append(pessoas.copy)
         
     if escolha == 'N':
         break
@@ -21,4 +23,8 @@ while True:
 media = idades_totais / loop
 
 for k, c in enumerate(usuarios):
-    print(usuarios["nome"])
+    print(loop)
+    print(media)
+    
+    print(idade["K"])
+    
