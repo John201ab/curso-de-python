@@ -1,7 +1,7 @@
 usuarios = list()
 mulheres = list()
 pessoas = dict()
-loop = numulheres= acima = idades_totais = 0
+loop = numulheres= acima = idades_totais = v = 0
 
 while True:
     pessoas["nome"] = str(input('Digite seu nome: '))
@@ -14,7 +14,7 @@ while True:
     idades_totais += pessoas["idade"]
     if pessoas["sexo"] == "M":
         numulheres += 1
-        mulheres.append(pessoas.copy)
+        mulheres.append(pessoas.copy())
         
     if escolha == 'N':
         break
@@ -22,9 +22,14 @@ while True:
 
 media = idades_totais / loop
 
-for k, c in enumerate(usuarios):
-    print(loop)
-    print(media)
-    
-    print(idade["K"])
+
+print(f'o grupo tem: {loop} pessoas')
+print(f' a média de idade do grupo é: {media}')
+print(f'as mulheres cadastradas foram: ')
+for k in mulheres:
+    print(k["nome"])
+print("lista das pessoas com idade acima da média: ")
+for v, c in usuarios:
+    if "idade" >= media:
+        print("usuario"[v])
     
