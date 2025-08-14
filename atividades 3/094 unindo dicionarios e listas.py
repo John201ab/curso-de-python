@@ -24,12 +24,12 @@ media = idades_totais / loop
 
 
 print(f'o grupo tem: {loop} pessoas')
-print(f' a média de idade do grupo é: {media}')
+print(f' a média de idade do grupo é: {media} anos')
 print(f'as mulheres cadastradas foram: ')
-for k in mulheres:
-    print(k["nome"])
+for lopp, mulher in enumerate(mulheres):
+    print(mulher["nome"])
 print("lista das pessoas com idade acima da média: ")
-for v, c in usuarios:
-    if "idade" >= media:
-        print("usuario"[v])
+for voltas, velhos in enumerate(usuarios):
+    if velhos["idade"] >= media:
+        print(f"nome:{velhos["nome"]}")
     
