@@ -2,6 +2,7 @@ estatisticas = list()
 jogador = dict()
 escolha = ""
 jogos1 = list()
+check = 0
 
 while escolha != 'N':
     jogador["nome"] = input('digite o nome do jogador: ')
@@ -28,6 +29,13 @@ while escolha != 'N':
 
 
 
+
 print(f'Nº {'Nome: ':>10} {'Gols: ':^20} {'Gols totais: ':>30}')
 for loop, valor in enumerate(estatisticas):
-    print(f'{loop} {valor["nome"]:>10} {enumerate(valor["gols"]):>15} {valor["gols_totais"]:>25}')
+    print(f'{loop} {valor["nome"]:>10} {str(valor["gols"]):^15} {valor["gols_totais"]:>25}')
+
+while True:
+    check = int(input('Deseja ver estatisticas de qual jogador? '))
+
+    print(estatisticas[check])
+    print(f'==DADOS DO JOGADOR {estatisticas[int(check)]["nome"].upper()}== ')
