@@ -2,7 +2,7 @@ estatisticas = list()
 jogador = dict()
 escolha = ""
 jogos1 = list()
-check = 0
+check = voltas = 0
 
 while escolha != 'N':
     jogador["nome"] = input('digite o nome do jogador: ')
@@ -27,15 +27,25 @@ while escolha != 'N':
         while escolha not in ['S','N']:
             escolha = input('Não entendi, digite novamente [S/N]').strip().upper()
 
+    voltas += 1
 
 
-
-print(f'Nº {'Nome: ':>10} {'Gols: ':^20} {'Gols totais: ':>30}')
+print(f'Nº {'Nome: ':>10} {'Gols: ':^20} {'Gols totais: ':>20}')
 for loop, valor in enumerate(estatisticas):
-    print(f'{loop} {valor["nome"]:>10} {str(valor["gols"]):^15} {valor["gols_totais"]:>25}')
+    print(f'{loop} {valor["nome"]:>10} {str(valor["gols"]):^15} {valor["gols_totais"]:>20}')
 
 while True:
-    check = int(input('Deseja ver estatisticas de qual jogador? '))
+    check = int(input('Deseja ver estatisticas de qual jogador? (999 para) '))
 
-    print(estatisticas[check])
-    print(f'==DADOS DO JOGADOR {estatisticas[int(check)]["nome"].upper()}== ')
+    if check > voltas:
+        while check > voltas:
+            check = int(input('Digite um numero válido: '))
+
+    if check <= voltas:
+        print(estatisticas[check])
+        print(f'==DADOS DO JOGADOR {estatisticas[int(check)]["nome"].upper()}== ')
+        for voltas,gols in enumerate(estatisticas[check]['gols']):
+            print(f'no {voltas + 1}º fez {gols} gols')
+
+    if check == 999:
+        break
