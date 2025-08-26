@@ -1,6 +1,6 @@
 estatisticas = list()
 jogador = dict()
-escolha = ""
+escolha = " "
 jogos1 = list()
 check = voltas = 0
 
@@ -13,10 +13,9 @@ while escolha != 'N':
         jogos = int(input(f'quantos gols ele marcou na {c+1}° partida? '))
         jogos1.append(jogos)
         
-    jogador["gols"] = jogos1.copy()   
     escolha = input('deseja continuar? [S/N]').strip().upper()
+    jogador["gols"] = jogos1.copy()   
     jogos1.clear()
-
     jogador["gols_totais"] = sum(jogador["gols"].copy())
     estatisticas.append(jogador.copy())
 
@@ -26,9 +25,7 @@ while escolha != 'N':
     if escolha not in ['S','N']:
         while escolha not in ['S','N']:
             escolha = input('Não entendi, digite novamente [S/N]').strip().upper()
-
     voltas += 1
-
 
 print(f'Nº {'Nome: ':>10} {'Gols: ':^20} {'Gols totais: ':>20}')
 for loop, valor in enumerate(estatisticas):
