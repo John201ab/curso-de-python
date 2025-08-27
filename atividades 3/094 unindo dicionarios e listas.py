@@ -17,16 +17,17 @@ while True:
         
     if escolha == 'N':
         break
- 
+
 media = idades_totais / loop
 
-print(f'o grupo tem: {loop} pessoas')
-print(f' a média de idade do grupo é: {media} anos')
-print(f'as mulheres cadastradas foram: ')
+print(f'A) o grupo tem: {loop} pessoas')
+print(f'B) a média de idade do grupo é: {media} anos')
+print(f'C)as mulheres cadastradas foram: ')
 for lopp, mulher in enumerate(mulheres):
-    print(mulher["nome"], end=' ')
-print("lista das pessoas com idade acima da média: ")
+    print(mulher["nome"], end=', ') 
+    
+print("\n D) lista das pessoas com idade acima da média: ")
 for voltas, velhos in enumerate(usuarios):
     if velhos["idade"] >= media:
-        print(f"dados: {velhos} \n")
+        print(f" {velhos} \n")
     
