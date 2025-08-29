@@ -1,6 +1,5 @@
 from random import randint
 
-
 pares = list()
 aleatorio = list()
 par = list()
