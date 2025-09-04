@@ -1,5 +1,5 @@
 from time import sleep
-
+# função que faz contagem de x até y pulando de z em z
 def contador(a, b, c):
     for numero in range(a + 1, b + 1, c):
         print( numero, end= " ")
@@ -24,4 +24,5 @@ if fim < inicio:
     inicio = inicio - 1
     fim = fim - 1
 
+# define os valores para a contagem personalizada
 contador(inicio, fim, salt)

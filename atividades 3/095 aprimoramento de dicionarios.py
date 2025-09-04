@@ -3,7 +3,7 @@ jogador = dict()
 escolha = " "
 jogos1 = list()
 check = volta = 0
-
+#coleta de dados do usuário
 while escolha != 'N':
     jogador["nome"] = input('digite o nome do jogador: ')
     partidas = int(input('quantas partidas ele jogou? '))
@@ -18,7 +18,8 @@ while escolha != 'N':
     jogos1.clear()
     jogador["gols_totais"] = sum(jogador["gols"].copy())
     estatisticas.append(jogador.copy())
-
+    
+    #confirmação de mais cadastros
     if escolha == 'N':
         break
     
@@ -28,10 +29,13 @@ while escolha != 'N':
 
     volta += 1
 
+
+#printa as informaçoes de todos os cadastrados na tela
 print(f'Nº {'Nome: ':>10} {'Gols: ':^20} {'Gols totais: ':>20}')
 for loop, valor in enumerate(estatisticas):
     print(f'{loop} {valor["nome"]:>10} {str(valor["gols"]):^15} {valor["gols_totais"]:>20}')
 
+# solicitação de visualização de cadastro individual
 while True:
     check = int(input('Deseja ver estatisticas de qual jogador? (999 para) '))
 
@@ -43,7 +47,8 @@ while True:
             check = input('Digite um numero válido: ')  
             if check == 999:
                 break
-
+    
+    #Exibição do cadastro individual
     if check <= volta:
         print(estatisticas[check])
         print(f'==DADOS DO JOGADOR {estatisticas[int(check)]["nome"].upper()}== ')
