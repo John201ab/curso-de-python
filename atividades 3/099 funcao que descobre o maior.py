@@ -1,20 +1,16 @@
 from time import sleep
-def calculadora(tupla):
+def calculadora(*num):
     print( '=-' * 20)
     print('analisando valores...')
     sleep(0.5)
-    for p, v in enumerate(tupla):
+    for p, v in enumerate(num):
         print(v, end=" ")
         sleep(0.5)
-    print(f'foram informados {len(tupla)} valores ao todo.')
-    print(f'o maior valor informado foi: {max(tupla)}')
+    print(f'foram informados {len(num)} valores ao todo.')
+    print(f'o maior valor informado foi: {max(num)}')
 
-numeros = [1, 2, 3, 4, 5, 6]
-calculadora(numeros)
-numeros = [4, 7, 0]
-calculadora(numeros)
-numeros = [0]
-calculadora(numeros)
-numeros = [6]
-calculadora(numeros)
+calculadora(1, 2, 3, 4, 5, 6)
+calculadora(4, 7, 0)
+calculadora(0)
+calculadora(6)
 print("\n","\n")
