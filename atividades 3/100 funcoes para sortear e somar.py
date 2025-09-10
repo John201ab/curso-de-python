@@ -1,8 +1,8 @@
 from random import randint
 
-pares = list()
-aleatorio = list()
 par = list()
+aleatorio = list()
+pares = list()
  #função que sorteia 5 numeros entre 0 e 99
 def sorteia():
     global aleatorio
@@ -11,13 +11,13 @@ def sorteia():
 
 #função que faz a separação e soma de numeros pares
 def somapar():
-    global pares
+    global par
     for v, l in enumerate(aleatorio):
         if l % 2 == 0:
-            pares.append(l)
+            par.append(l)
 
 sorteia()
 somapar()
 print(f"os numeros são {aleatorio}")
-par.append(sum(pares))
-print(f'a soma de {pares} é {par}')
+pares.append(sum(par))
+print(f'a soma de {par} é {pares}')
