@@ -1,9 +1,7 @@
-def fatorial(valor):
-    menos = valor 
-    fatorado = 0
-    for c in range(valor, 1, -1):      
-        fatorado += menos * (c - 1)
-        menos -= 1
+def fatorial(valor, mostrar = False):
+    fatorado = 1
+    for c in range(valor, 0, -1):      
+       fatorado *= c
     return(fatorado)
 
 numero = int(input('Digite um numero a ser fatorado: '))
