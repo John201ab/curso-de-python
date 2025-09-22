@@ -1,5 +1,7 @@
 def leiaint(numero):
     validador = numero
+
+    #valida se é numerico ou não
     if validador.isnumeric():
         return(f'Você digitou o número: {numero}')
     else:
@@ -15,4 +17,4 @@ while True:
         print(resultado)
         break
     else:
-        numero = input(('Digite um numero válido: ')).strip()
+        numero = input(('ERRO! Digite um numero válido: ')).strip()

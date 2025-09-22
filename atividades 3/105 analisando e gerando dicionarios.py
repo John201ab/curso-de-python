@@ -1,8 +1,9 @@
-def calculadora(valores):
+def calculadora(*valores, sit = False):
+    """Função que analisa notas e situações de alunos
+    resposta:contem as  notas do aluno
+    sit: parametro opcional, indicando se deve ou não adicionar a situação
+    return: dicionario com as informaçoes dam turma"""
     
-    total = len(notas)
-    print(total)
-
     maior = 0
     for k, i in enumerate(valores):
         if i > maior:
@@ -12,19 +13,31 @@ def calculadora(valores):
         if menor > i:
             menor = i
 
-    media = sum(valores) / total
+    media = round(sum(valores) / total, 2)
 
+    if media > 7:
+        situação = 'boa '
 
+    elif media < 7 and media > 5:
+        situação = 'regular'
+
+    else:
+        situação =  'ruim'
+    
     boletim = {'total' : total, 'maior' :  maior, 'menor' : menor, 'media' : media}
+
+    if sit == True:
+            boletim['situação'] = situação
 
     return(boletim)
 
+sit=True
 
-notas = (1, 3, 5, 7, 8, 8)
+notas = (1, 3, 5, 8, 8,)
 
 
 resposta = notas
 
-calculadora(resposta)
+resposta = calculadora(resposta)
 
 print(resposta)
