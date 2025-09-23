@@ -13,3 +13,8 @@ def aumentado(numero, valor = 0):
 def reduzido(numero, valor = 0):
     reduz = numero - (numero * valor / 100)
     return reduz
+
+
+def moeda(valor):
+    numero = f'R$ {valor:,.2f}'.replace(',', 'x').replace('.', ',').replace('x','. ')
+    return numero
