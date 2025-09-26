@@ -1,21 +1,4 @@
-def leiaDinheiro(msg, aumento = 0, redução = 0):
-    validador = msg
-    if validador.isnumeric():
-        conversao = int(msg)
-        valor = resumo(conversao, aumento, redução)
-        return(valor)
-
-    else:
-        while True:
-            if validador.isnumeric():
-                conversao = int(validador)
-                break
-            else:
-                validador = input('digite um valor válido: ')
-        valor = resumo(conversao, aumento, redução)
-
 def resumo(numero, aumento , redução):    
-
     valor = moeda(numero)
     dobro = moeda(numero*2)
     metade = moeda(numero/2)
