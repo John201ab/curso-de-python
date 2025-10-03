@@ -12,16 +12,15 @@ def leiaint():
                 return dado 
             else:
                 print('\033[31mErro! esse numero não é um inteiro\033[m')
-
-        
         else:
             return(dado)
 
 
 
 def leiafloat():
-    dado = (input('digite um numero: '))
     while True:
+        dado = (input('digite um numero: '))
+
         try:
             int(dado)
             

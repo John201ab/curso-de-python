@@ -1,4 +1,5 @@
 import sys
+import os
 
 # MENU DE SELEÇÃO
 def selecao():
@@ -11,7 +12,7 @@ def selecao():
 Escolha uma opção acima: ''')
     while True:
         if escolha.strip() == '1':
-            vizualizar()  
+            visualizar()
             break
         elif escolha.strip() == '2':
             dadosCadastrais()
@@ -36,13 +37,21 @@ def dadosCadastrais():
 
 
 #EXIBE A LISTA COMPLETA PARA O USUÁRIO
-def vizualizar():
+def visualizar():
     titulo('PESSOAS CADASTRADAS')
-    with open('arquivo.txt', 'r') as arquivo:
-        conteudo = arquivo.read()
-        print(conteudo)   
-        continuar()   
 
+    if not os.path.exists('arquivo.txt'):
+        with open('arquivo.txt', 'w') as f:
+            print('Arquivo criado! Nenhuma pessoa cadastrada ainda.')
+    else:
+        with open('arquivo.txt', 'r') as arquivo:
+            conteudo = arquivo.read()
+            if conteudo.strip() == "":
+                print("Nenhuma pessoa cadastrada.")
+            else:
+                print(conteudo)
+
+    continuar()
 
 #VALIDA SE PODE CADASTRAR NOME E IDADE
 def validador(nome, idade):
@@ -61,7 +70,7 @@ def validador(nome, idade):
 
              
         with open('arquivo.txt', 'a') as arquivo:  
-            arquivo.write(f'{nome} {idade:.<20} anos\n')
+            arquivo.write(f'{nome} {idade:.>20} anos\n')
         print(f'Novo nome: {nome} adicionado com sucesso!')
         continuar()
 
@@ -88,3 +97,4 @@ def continuar():
     
     else:
         print('Você escolheu continuar')
+        
