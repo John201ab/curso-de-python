@@ -18,5 +18,12 @@ class Gafanhoto:
 g1 = Gafanhoto()
 print(g1.mensagem())
 
+print("=+" * 10)
+g2 = Gafanhoto()
+
+g2.idade = 21
+g2.nome = "joao"
+print(g2.mensagem())
+
 
     
