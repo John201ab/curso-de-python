@@ -12,17 +12,18 @@ class Livro():
         self.passar=avanco
 
         while True:
-            for self.cont in range (self.passar):
+            for c in range (self.passar):
                 self.cont += 1
                 if self.cont <= self.paginas:
                     print(f"pagina {self.cont} >>")
                 else:
                     print(f"Você chegou ao final do livro {self.titulos}!")
                     break
-            extra = int(input("Digite mais paginas para continuar: "))
-            c1.avancar_pg(extra)
-
-
+            if self.cont < self.paginas:
+                extra = int(input("Digite mais paginas para continuar: "))
+                c1.avancar_pg(extra)
+            else:
+                break
 
 c1=Livro("teste",20)
 
