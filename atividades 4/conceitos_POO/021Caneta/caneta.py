@@ -10,19 +10,24 @@ class Caneta():
     def __init__(self, cor):
         self.cor = cor
     
-    def destampar():
-        self.tampa = False
+    def destampar(self):
+        try:
+            self.tampa = False
+        except:
+            print("A caneta já está sem tampa!")
 
-    def tampar():
-        self.tampa = True
+    def tampar(self):
+        try:
+            self.tampa = True
+        except:
+            print("A caneta ainda está tampada!")
+
     def escrever(self , mensagem):
         if self.tampa == True:
             print("Retire a tampa para escrever")
         
         else:
             print(f"[{self.cor}]{mensagem}[/]")
-
-
 
 c1 = Caneta("red")
 c1.destampar()
